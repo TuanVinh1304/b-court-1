@@ -41,9 +41,36 @@ const Main = () => {
                   </div>
                   <FaRegCalendarMinus fontSize={28} color='' />
               </div> 
-              
           </div>
-
+<div className='flex mt-[22px] w-full gap-[30px]'>
+              <div className='basic-[70%] border bg-white shadow-md cursor-pointer rounded-[4px]'>
+                  <div className='bg-[#f89fc] flex items-center justify-between py-[15px] px-[20px] border-b-[1px] border-[#ededed] mb-[20px]'>
+                      <h2>Earnings Overviews</h2>   
+                      <FaEllipsisV color='gray' className='cursor-pointer' />
+                  </div>
+                  <div>
+                      <LineChart
+          width={1000}
+          height={400}
+          data={data}
+          margin={{
+            top: 5,
+            right: 30,
+            left: 20,
+            bottom: 5,
+          }}
+        >
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name" />
+          <YAxis />
+          <Tooltip />
+          <Legend />
+          <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
+          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+        </LineChart>
+                  </div>
+              </div>
+          </div>
           
           
       </div>
