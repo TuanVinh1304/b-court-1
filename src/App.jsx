@@ -27,8 +27,9 @@ import UserCheckIn from "./staffpages/UserCheckin";
 import SideBarv3 from "./adminpages/Sidebarv3";
 import ManagementUser from "./adminpages/ManagementUser";
 import ApproveCourt from "./adminpages/ApproveCourt";
+import ReactDOM from 'react-dom/client';
 
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Profile from "./userPages/Profile";
 
 import ForgotPassword from "./component/ForgotPassword";
@@ -50,6 +51,13 @@ function App() {
     setIsLoggedIn(false);
     window.location.href = "/"; // Redirect to the home page
   };
+
+  const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <Router />
+  </React.StrictMode>
+);
 
   return (
     <Router>
