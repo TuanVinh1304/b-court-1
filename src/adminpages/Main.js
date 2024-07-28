@@ -42,15 +42,17 @@ const Main = () => {
                   <FaRegCalendarMinus fontSize={28} color='' />
               </div> 
           </div>
-<div className='flex mt-[22px] w-full gap-[30px]'>
-              <div className='basic-[70%] border bg-white shadow-md cursor-pointer rounded-[4px]'>
-                  <div className='bg-[#f89fc] flex items-center justify-between py-[15px] px-[20px] border-b-[1px] border-[#ededed] mb-[20px]'>
+<div className='grid grid-cols-10'>
+              <div  className="col-span-10 md:col-span-7">
+                  <div className='flex mt-[22px] w-full gap-[30px]'>
+              <div className='basis-[70%] border bg-white shadow-md cursor-pointer rounded-[4px]'>
+                  <div className='bg-[#f8f9fc] flex items-center justify-between py-[15px] px-[20px] border-b-[1px] border-[#ededed] mb-[20px]'>
                       <h2>Earnings Overviews</h2>   
                       <FaEllipsisV color='gray' className='cursor-pointer' />
                   </div>
                   <div>
                       <LineChart
-          width={1000}
+          width={950}
           height={400}
           data={data}
           margin={{
@@ -70,6 +72,19 @@ const Main = () => {
         </LineChart>
                   </div>
               </div>
+          </div>
+              </div>
+              <div className="col-span-10 md:col-span-3">
+                  <div className='basis-[30%] border bg-white shadow-mb cursor-pointer rounded-[4px]'>
+              <div className='bg-[#f8f9fc] flex items-center justify-between py-[15px] px-[20px] border-b-[1px] border-[#ededed]'>
+                  <h2>Revenue Resouces</h2>
+                  <FaEllipsisV color='gray' className='cursor-pointer' />
+              </div>
+              <div className='pl-[35px]'>
+                  <PieComponent />
+              </div>
+          </div>
+          </div>
           </div>
           
           
