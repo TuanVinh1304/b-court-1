@@ -86,7 +86,27 @@ const Main = () => {
           </div>
           </div>
           </div>
-          
+                        <div className='basis-[100%] border bg-white shadow cursor-pointer rounded-[4px]'>
+                  <div className='bg-[#f8f9fc] flex items-center justify-between py-[15px] px-[20px] border-b-[1px] border-[#ededed]'>
+                      <h2>Project Overviews</h2>
+                      <FaEllipsisV color='gray' className='cursor-pointer' />
+                  </div>
+                  <div className='px-[25px] space-y-[15px] py-[15px]'>
+                  <div>
+                      <h2>Customer</h2>
+                      <Progress percent={30} strokeColor='#e74a3b' />
+                  </div>
+                  <div>
+                      <h2>Manage Court</h2>
+                      <Progress percent={30} status='active' strokeColor='#f6c23e'/>
+                  </div>
+                  <div>
+                      <h2>Court</h2>
+                      <Progress percent={30} status='active' strokeColor='#f6c23e'/>
+                  </div>
+                  
+                  </div>
+              </div>
           
       </div>
       
